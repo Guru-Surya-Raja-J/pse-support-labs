@@ -1,0 +1,13 @@
+# api + web logs for the Oasis portal repro (05:36-05:41Z)
+api-1  | 2026-11-14T05:36:23.936696858Z {"time":"2026-11-14T05:36:23.93627848Z","level":"INFO","msg":"import received","import_id":"8f2e6b25-1f7d-4071-b099-0b3bf17a8a42","seller_id":2,"filename":"oasis-builders-nov-2026.xlsx","bytes":166969}
+api-1  | 2026-11-14T05:36:24.349632249Z {"time":"2026-11-14T05:36:24.348981585Z","level":"INFO","msg":"import parsed","import_id":"8f2e6b25-1f7d-4071-b099-0b3bf17a8a42","seller_id":2,"filename":"oasis-builders-nov-2026.xlsx","rows":600,"invoices":8}
+api-1  | 2026-11-14T05:37:31.018460478Z {"time":"2026-11-14T05:37:31.01811735Z","level":"INFO","msg":"import received","import_id":"c5cee28e-c3ea-40f2-ab73-13f95fd61967","seller_id":2,"filename":"oasis-builders-nov-2026.xlsx","bytes":166969}
+api-1  | 2026-11-14T05:37:32.521848834Z {"time":"2026-11-14T05:37:32.521113719Z","level":"INFO","msg":"api starting","addr":":8080","asp_url":"http://asp-mock:8090"}
+api-1  | 2026-11-14T05:37:52.878072550Z {"time":"2026-11-14T05:37:52.87769877Z","level":"INFO","msg":"import received","import_id":"54b88000-9738-4354-b892-66a539632262","seller_id":2,"filename":"oasis-builders-nov-2026.xlsx","bytes":166969}
+api-1  | 2026-11-14T05:37:53.333490544Z {"time":"2026-11-14T05:37:53.332979292Z","level":"INFO","msg":"import parsed","import_id":"54b88000-9738-4354-b892-66a539632262","seller_id":2,"filename":"oasis-builders-nov-2026.xlsx","rows":600,"invoices":8}
+api-1  | 2026-11-14T05:39:54.965271702Z {"time":"2026-11-14T05:39:54.964807131Z","level":"INFO","msg":"import completed","import_id":"54b88000-9738-4354-b892-66a539632262","seller_id":2,"filename":"oasis-builders-nov-2026.xlsx","rows":600,"invoices":8,"validated":0,"rejected":8,"duration_ms":121895}
+
+# web proxy log (504 = 60 s timeout in web/app/api/[...path]/route.ts:6, 502 = api down)
+web-1  | 2026-11-14T05:37:24.018753473Z {"ts":"2026-11-14T05:37:24.016Z","msg":"proxy","level":"error","method":"POST","path":"/imports","status":504,"durationMs":60106,"error":"TimeoutError: The operation was aborted due to timeout"}
+web-1  | 2026-11-14T05:37:31.195996265Z {"ts":"2026-11-14T05:37:31.194Z","msg":"proxy","level":"error","method":"POST","path":"/imports","status":502,"durationMs":195,"error":"TypeError: fetch failed (Error: read ECONNRESET)"}
+web-1  | 2026-11-14T05:38:52.926771013Z {"ts":"2026-11-14T05:38:52.925Z","msg":"proxy","level":"error","method":"POST","path":"/imports","status":504,"durationMs":60106,"error":"TimeoutError: The operation was aborted due to timeout"}

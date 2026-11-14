@@ -1,0 +1,62 @@
+== Invoices by seller and status ==
+ seller_id |             name              |  status   | count 
+-----------+-------------------------------+-----------+-------
+         1 | Desert Rose Trading LLC       | Accepted  |   210
+         1 | Desert Rose Trading LLC       | Parsed    |     8
+         1 | Desert Rose Trading LLC       | Submitted |   137
+         1 | Desert Rose Trading LLC       | Validated |    10
+         2 | Oasis Builders Supply LLC     | Accepted  |    16
+         3 | Marina Bay Hospitality LLC    | Accepted  |   199
+         3 | Marina Bay Hospitality LLC    | Parsed    |    11
+         3 | Marina Bay Hospitality LLC    | Submitted |   143
+         3 | Marina Bay Hospitality LLC    | Validated |     7
+         4 | Al Noor Fuel & Lubricants LLC | Accepted  |     7
+         4 | Al Noor Fuel & Lubricants LLC | Rejected  |     3
+         5 | Sahara Medical Supplies FZE   | Accepted  |    20
+         5 | Sahara Medical Supplies FZE   | Submitted |    32
+         6 | Ghaf Tree Café LLC            | Rejected  |     4
+         7 | Palm Coast Electronics LLC    | Accepted  |   204
+         7 | Palm Coast Electronics LLC    | Parsed    |    14
+         7 | Palm Coast Electronics LLC    | Submitted |   143
+         7 | Palm Coast Electronics LLC    | Validated |     4
+         8 | Zayed Port Logistics LLC      | Accepted  |   196
+         8 | Zayed Port Logistics LLC      | Parsed    |     5
+         8 | Zayed Port Logistics LLC      | Submitted |   140
+         8 | Zayed Port Logistics LLC      | Validated |     7
+(22 rows)
+
+== Imports by seller and status (with timing) ==
+             name              |   status   | count | avg_s | max_s 
+-------------------------------+------------+-------+-------+-------
+ Al Noor Fuel & Lubricants LLC | Completed  |     2 |   3.2 |   3.6
+ Desert Rose Trading LLC       | Completed  |    58 |   2.6 |   4.5
+ Desert Rose Trading LLC       | Processing |     3 |       |      
+ Ghaf Tree Café LLC            | Completed  |     1 |   1.8 |   1.8
+ Marina Bay Hospitality LLC    | Completed  |    57 |   2.6 |   3.2
+ Marina Bay Hospitality LLC    | Processing |     3 |       |      
+ Oasis Builders Supply LLC     | Completed  |     2 |  63.6 | 121.9
+ Palm Coast Electronics LLC    | Completed  |    58 |   2.6 |   4.1
+ Palm Coast Electronics LLC    | Processing |     3 |       |      
+ Sahara Medical Supplies FZE   | Completed  |     2 |   9.9 |  12.7
+ Zayed Port Logistics LLC      | Completed  |    56 |   2.6 |   2.8
+ Zayed Port Logistics LLC      | Processing |     3 |       |      
+(12 rows)
+
+== Invoices stuck (Parsed / Validated / Submitted) older than 2 minutes, by seller ==
+            name             |  status   | count |            oldest             |            newest             
+-----------------------------+-----------+-------+-------------------------------+-------------------------------
+ Desert Rose Trading LLC     | Parsed    |     8 | 2026-11-14 05:26:39.605875+00 | 2026-11-14 05:27:14.717489+00
+ Desert Rose Trading LLC     | Submitted |   137 | 2026-11-14 05:26:03.883857+00 | 2026-11-14 05:27:51.215317+00
+ Desert Rose Trading LLC     | Validated |    10 | 2026-11-14 05:26:40.040829+00 | 2026-11-14 05:27:15.595086+00
+ Marina Bay Hospitality LLC  | Parsed    |    11 | 2026-11-14 05:26:40.236018+00 | 2026-11-14 05:27:15.336789+00
+ Marina Bay Hospitality LLC  | Submitted |   143 | 2026-11-14 05:26:04.272454+00 | 2026-11-14 05:27:51.504286+00
+ Marina Bay Hospitality LLC  | Validated |     7 | 2026-11-14 05:26:40.667661+00 | 2026-11-14 05:27:15.914652+00
+ Palm Coast Electronics LLC  | Parsed    |    14 | 2026-11-14 05:26:40.666771+00 | 2026-11-14 05:27:15.640811+00
+ Palm Coast Electronics LLC  | Submitted |   143 | 2026-11-14 05:26:04.595596+00 | 2026-11-14 05:27:51.890976+00
+ Palm Coast Electronics LLC  | Validated |     4 | 2026-11-14 05:27:14.49133+00  | 2026-11-14 05:27:15.740449+00
+ Sahara Medical Supplies FZE | Submitted |    32 | 2026-11-14 05:24:01.624335+00 | 2026-11-14 05:24:01.699656+00
+ Zayed Port Logistics LLC    | Parsed    |     5 | 2026-11-14 05:26:39.032081+00 | 2026-11-14 05:27:14.375339+00
+ Zayed Port Logistics LLC    | Submitted |   140 | 2026-11-14 05:26:04.936015+00 | 2026-11-14 05:27:52.145775+00
+ Zayed Port Logistics LLC    | Validated |     7 | 2026-11-14 05:26:39.460742+00 | 2026-11-14 05:27:15.626835+00
+(13 rows)
+

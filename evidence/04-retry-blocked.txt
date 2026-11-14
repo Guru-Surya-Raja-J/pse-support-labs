@@ -1,0 +1,8 @@
+# Retry a stuck Sahara invoice (56447904-083d-4478-88eb-e172f6322202)
+$ curl -X POST http://localhost:8080/v1/invoices/56447904-083d-4478-88eb-e172f6322202/retry
+{"error":"only invoices in status Validated or Failed can be retried (current status: Submitted)"}
+ -> HTTP 409
+
+$ curl -X POST http://localhost:8080/v1/imports/d176ba80-d2ab-419e-95ad-b57fe5ce9c82/retry   (batch "Retry stuck invoices")
+{"requeued":0}
+ -> HTTP 200

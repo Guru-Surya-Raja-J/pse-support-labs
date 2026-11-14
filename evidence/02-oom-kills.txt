@@ -1,0 +1,11 @@
+# Kernel OOM kills of the api container (WSL2 kernel, dmesg | grep -i oom)
+# Timestamps are seconds since WSL boot; mapped to wall clock via the api restart log lines below.
+[ 3332.086866] grafana invoked oom-killer: gfp_mask=0xcc0(GFP_KERNEL), order=0, oom_score_adj=0
+[ 3332.120291] Memory cgroup out of memory: Killed process 13091 (grafana) total-vm:2430184kB, anon-rss:312388kB, file-rss:204416kB, shmem-rss:0kB, UID:472 pgtables:2264kB oom_score_adj:0
+[ 3380.778037] api invoked oom-killer: gfp_mask=0xcc0(GFP_KERNEL), order=0, oom_score_adj=0
+[ 3380.780542] Memory cgroup out of memory: Killed process 13620 (api) total-vm:1409596kB, anon-rss:129272kB, file-rss:13184kB, shmem-rss:0kB, UID:10001 pgtables:392kB oom_score_adj:0
+[ 3415.624016] api invoked oom-killer: gfp_mask=0xcc0(GFP_KERNEL), order=0, oom_score_adj=0
+[ 3415.625206] Memory cgroup out of memory: Killed process 62361 (api) total-vm:1409340kB, anon-rss:129536kB, file-rss:13184kB, shmem-rss:0kB, UID:10001 pgtables:392kB oom_score_adj:0
+
+# docker inspect invoicely-lite-api-1
+RestartCount=2 Memory(limit)=134217728 MemorySwap=134217728 RestartPolicy=unless-stopped

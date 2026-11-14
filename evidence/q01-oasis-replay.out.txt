@@ -1,0 +1,22 @@
+== The morning replay of Rashid's upload (make load, import 407a9872): 600 rows, 121.9 s, outcome per invoice ==
+  invoice_number   |  status  |            asp_message_id            | total_incl_vat |          updated_at           
+-------------------+----------+--------------------------------------+----------------+-------------------------------
+ OBS-2611-001-H8BN | Accepted | 46d8f46f-0b8a-4aa0-9165-ed75893e7f1d |      469807.80 | 2026-11-14 05:25:51.525123+00
+ OBS-2611-002-H8BN | Accepted | 22202df7-1002-4df0-aa67-0cb10b0704c7 |      506761.50 | 2026-11-14 05:25:51.537701+00
+ OBS-2611-003-H8BN | Accepted | e170e771-212f-41fb-8a5b-94f6909797b9 |      383475.75 | 2026-11-14 05:25:51.527489+00
+ OBS-2611-004-H8BN | Accepted | ff5e8e95-141b-4ef7-b9f7-82efe46783c0 |      466130.70 | 2026-11-14 05:25:51.543755+00
+ OBS-2611-005-H8BN | Accepted | 4fe1cbd1-6a1a-466e-a55b-a9d82091c74f |      586164.60 | 2026-11-14 05:25:51.560503+00
+ OBS-2611-006-H8BN | Accepted | 19620104-312c-4d7f-9d28-837096d7284d |      427919.10 | 2026-11-14 05:25:51.565397+00
+ OBS-2611-007-H8BN | Accepted | 727cc886-874d-4bc4-ad55-722125fc0d46 |      356633.55 | 2026-11-14 05:25:51.575434+00
+ OBS-2611-008-H8BN | Accepted | 05748463-bece-4068-a204-82d9010b4fb2 |      615742.05 | 2026-11-14 05:25:51.577613+00
+(8 rows)
+
+== Final state of my 3 portal-repro attempts ==
+                  id                  |   status   | row_count | secs  |                            invoice_statuses                             
+--------------------------------------+------------+-----------+-------+-------------------------------------------------------------------------
+ 407a9872-712d-4234-a99d-857e24b19940 | Completed  |       600 | 121.9 | Accepted,Accepted,Accepted,Accepted,Accepted,Accepted,Accepted,Accepted
+ 8f2e6b25-1f7d-4071-b099-0b3bf17a8a42 | Processing |       600 |       | Validated,Validated,Validated,Validated,Parsed,Parsed,Parsed,Parsed
+ c5cee28e-c3ea-40f2-ab73-13f95fd61967 | Processing |         0 |       | 
+ 54b88000-9738-4354-b892-66a539632262 | Completed  |       600 | 121.9 | Rejected,Rejected,Rejected,Rejected,Rejected,Rejected,Rejected,Rejected
+(4 rows)
+

@@ -1,0 +1,52 @@
+== Oasis (seller 2) imports, newest last ==
+                  id                  |           filename           |   status   | row_count | invoice_count | secs  |          created_at           |         completed_at         
+--------------------------------------+------------------------------+------------+-----------+---------------+-------+-------------------------------+------------------------------
+ 0c6f3a52-1f0e-4f43-9d7a-6a1f1b2f0a02 | oasis-builders-oct-2026.xlsx | Completed  |        16 |             8 |   5.4 | 2026-10-31 07:40:00+00        | 2026-10-31 07:40:03+00
+ 407a9872-712d-4234-a99d-857e24b19940 | oasis-builders-nov-2026.xlsx | Completed  |       600 |             8 | 121.9 | 2026-11-14 05:23:49.446387+00 | 2026-11-14 05:25:51.50105+00
+ 8f2e6b25-1f7d-4071-b099-0b3bf17a8a42 | oasis-builders-nov-2026.xlsx | Processing |       600 |             8 |       | 2026-11-14 05:36:23.928525+00 | 
+ c5cee28e-c3ea-40f2-ab73-13f95fd61967 | oasis-builders-nov-2026.xlsx | Processing |         0 |             0 |       | 2026-11-14 05:37:31.011041+00 | 
+ 54b88000-9738-4354-b892-66a539632262 | oasis-builders-nov-2026.xlsx | Processing |       600 |             8 |       | 2026-11-14 05:37:52.860168+00 | 
+(5 rows)
+
+== Oasis invoices from the real file (OBS-2611-xxx), per import ==
+              import_id               | invoice_number |  status   | rejected_by |                                      first_error                                       | has_asp_ref 
+--------------------------------------+----------------+-----------+-------------+----------------------------------------------------------------------------------------+-------------
+ 0c6f3a52-1f0e-4f43-9d7a-6a1f1b2f0a02 | OBS-2610-001   | Accepted  |             |                                                                                        | t
+ 0c6f3a52-1f0e-4f43-9d7a-6a1f1b2f0a02 | OBS-2610-002   | Accepted  |             |                                                                                        | t
+ 0c6f3a52-1f0e-4f43-9d7a-6a1f1b2f0a02 | OBS-2610-003   | Accepted  |             |                                                                                        | t
+ 0c6f3a52-1f0e-4f43-9d7a-6a1f1b2f0a02 | OBS-2610-004   | Accepted  |             |                                                                                        | t
+ 0c6f3a52-1f0e-4f43-9d7a-6a1f1b2f0a02 | OBS-2610-005   | Accepted  |             |                                                                                        | t
+ 0c6f3a52-1f0e-4f43-9d7a-6a1f1b2f0a02 | OBS-2610-006   | Accepted  |             |                                                                                        | t
+ 0c6f3a52-1f0e-4f43-9d7a-6a1f1b2f0a02 | OBS-2610-007   | Accepted  |             |                                                                                        | t
+ 0c6f3a52-1f0e-4f43-9d7a-6a1f1b2f0a02 | OBS-2610-008   | Accepted  |             |                                                                                        | t
+ 8f2e6b25-1f7d-4071-b099-0b3bf17a8a42 | OBS-2611-001   | Validated |             |                                                                                        | f
+ 8f2e6b25-1f7d-4071-b099-0b3bf17a8a42 | OBS-2611-002   | Validated |             |                                                                                        | f
+ 8f2e6b25-1f7d-4071-b099-0b3bf17a8a42 | OBS-2611-003   | Validated |             |                                                                                        | f
+ 8f2e6b25-1f7d-4071-b099-0b3bf17a8a42 | OBS-2611-004   | Validated |             |                                                                                        | f
+ 8f2e6b25-1f7d-4071-b099-0b3bf17a8a42 | OBS-2611-005   | Parsed    |             |                                                                                        | f
+ 8f2e6b25-1f7d-4071-b099-0b3bf17a8a42 | OBS-2611-006   | Parsed    |             |                                                                                        | f
+ 8f2e6b25-1f7d-4071-b099-0b3bf17a8a42 | OBS-2611-007   | Parsed    |             |                                                                                        | f
+ 8f2e6b25-1f7d-4071-b099-0b3bf17a8a42 | OBS-2611-008   | Parsed    |             |                                                                                        | f
+ 54b88000-9738-4354-b892-66a539632262 | OBS-2611-001   | Rejected  | portal      | Document number 'OBS-2611-001' already exists for this seller with status 'Validated'. | f
+ 54b88000-9738-4354-b892-66a539632262 | OBS-2611-002   | Rejected  | portal      | Document number 'OBS-2611-002' already exists for this seller with status 'Validated'. | f
+ 54b88000-9738-4354-b892-66a539632262 | OBS-2611-003   | Rejected  | portal      | Document number 'OBS-2611-003' already exists for this seller with status 'Validated'. | f
+ 54b88000-9738-4354-b892-66a539632262 | OBS-2611-004   | Rejected  | portal      | Document number 'OBS-2611-004' already exists for this seller with status 'Validated'. | f
+ 54b88000-9738-4354-b892-66a539632262 | OBS-2611-005   | Rejected  | portal      | Document number 'OBS-2611-005' already exists for this seller with status 'Parsed'.    | f
+ 54b88000-9738-4354-b892-66a539632262 | OBS-2611-006   | Rejected  | portal      | Document number 'OBS-2611-006' already exists for this seller with status 'Parsed'.    | f
+ 54b88000-9738-4354-b892-66a539632262 | OBS-2611-007   | Parsed    |             |                                                                                        | f
+ 54b88000-9738-4354-b892-66a539632262 | OBS-2611-008   | Parsed    |             |                                                                                        | f
+(24 rows)
+
+== Which Oasis November invoices actually reached the ASP (answer to the customer question 1) ==
+ invoice_number |  status  |            asp_message_id            
+----------------+----------+--------------------------------------
+ OBS-2610-001   | Accepted | 97aa28a6-ff82-421a-a41e-f9ce07e19d62
+ OBS-2610-002   | Accepted | a1a75ae7-6724-4586-b85a-f253a356ea00
+ OBS-2610-003   | Accepted | 86beccb8-fc41-4c9f-acf2-f50248d488ca
+ OBS-2610-004   | Accepted | 40c8f4b0-7424-4d4b-868d-fd4cc156b908
+ OBS-2610-005   | Accepted | 82c45681-3345-49fc-8ee8-0917461432d3
+ OBS-2610-006   | Accepted | 621b61b3-db63-4ad3-b7df-49046897f30f
+ OBS-2610-007   | Accepted | c76a492f-6597-4ed5-9efc-19f79e366723
+ OBS-2610-008   | Accepted | 5cae6afd-2c16-47aa-a279-247cb28e23c2
+(8 rows)
+

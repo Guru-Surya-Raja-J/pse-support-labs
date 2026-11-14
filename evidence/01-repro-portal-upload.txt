@@ -1,0 +1,10 @@
+# Reproduce item 01: upload samples/oasis-builders-nov-2026.xlsx through the PORTAL proxy (localhost:3000/api), as the customer does
+# attempt 1 started 05:36:23Z
+attempt 1 -> HTTP 504 after 60.164823s
+{"error":"Gateway Timeout"}
+# attempt 2 started 05:37:30Z (customer presses upload again)
+attempt 2 -> HTTP 502 after 0.221231s
+{"error":"Bad Gateway"}
+# attempt 3 started 05:37:52Z
+attempt 3 -> HTTP 504 after 60.124809s
+{"error":"Gateway Timeout"}

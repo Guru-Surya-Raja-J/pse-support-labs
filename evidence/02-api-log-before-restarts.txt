@@ -1,0 +1,16 @@
+# api log lines immediately before each restart (docker compose logs --timestamps api, 05:25:30Z-05:27:30Z)
+# Note: no error/panic is logged - the process is killed by the kernel, not crashing in Go.
+--- before restart (line 785) ---
+api-1  | 2026-11-14T05:26:40.747961814Z {"time":"2026-11-14T05:26:40.744470183Z","level":"INFO","msg":"asp response","invoice_id":"44974d76-5105-41b3-89a4-c6b6ce5eb710","invoice_number":"PCE-1116-H8BN-075-03","status_code":200,"duration_ms":7}
+api-1  | 2026-11-14T05:26:40.923952316Z {"time":"2026-11-14T05:26:40.898843303Z","level":"INFO","msg":"asp response","invoice_id":"265f86ec-d461-4056-ba49-a160ce8ec67f","invoice_number":"PCE-1116-H8BN-075-05","status_code":200,"duration_ms":1}
+api-1  | 2026-11-14T05:26:40.924008148Z {"time":"2026-11-14T05:26:40.902541044Z","level":"INFO","msg":"asp response","invoice_id":"e64d5ea8-dc49-472c-b360-e09070d99adb","invoice_number":"PCE-1116-H8BN-075-06","status_code":200,"duration_ms":1}
+api-1  | 2026-11-14T05:26:41.080447719Z {"time":"2026-11-14T05:26:41.080010676Z","level":"INFO","msg":"import received","import_id":"f6965378-9501-4d99-97cd-7fc0eb20b338","seller_id":8,"filename":"zpl-morning-80.xlsx","bytes":95800}
+api-1  | 2026-11-14T05:26:42.537930113Z {"time":"2026-11-14T05:26:42.537016705Z","level":"INFO","msg":"api starting","addr":":8080","asp_url":"http://asp-mock:8090"}
+api-1  | 2026-11-14T05:26:42.591746973Z {"time":"2026-11-14T05:26:42.591466041Z","level":"INFO","msg":"submission workers started","workers":4}
+--- before restart (line 1609) ---
+api-1  | 2026-11-14T05:27:15.610934849Z {"time":"2026-11-14T05:27:15.61044851Z","level":"INFO","msg":"import received","import_id":"3e9de395-83af-4512-891a-206592ff930b","seller_id":7,"filename":"pce-morning-167.xlsx","bytes":95828}
+api-1  | 2026-11-14T05:27:15.657403757Z {"time":"2026-11-14T05:27:15.656868855Z","level":"INFO","msg":"import parsed","import_id":"3e9de395-83af-4512-891a-206592ff930b","seller_id":7,"filename":"pce-morning-167.xlsx","rows":12,"invoices":6}
+api-1  | 2026-11-14T05:27:15.889755135Z {"time":"2026-11-14T05:27:15.888918194Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/imports/21c367f4-2e7c-491d-b0d4-64a9d1e67bdd","route":"/v1/imports/{id}","status":200,"duration_ms":2}
+api-1  | 2026-11-14T05:27:15.891833913Z {"time":"2026-11-14T05:27:15.891379548Z","level":"INFO","msg":"http request","method":"GET","path":"/v1/imports/21c367f4-2e7c-491d-b0d4-64a9d1e67bdd/rows","route":"/v1/imports/{id}/rows","status":200,"duration_ms":0}
+api-1  | 2026-11-14T05:27:17.153127764Z {"time":"2026-11-14T05:27:17.144612531Z","level":"INFO","msg":"api starting","addr":":8080","asp_url":"http://asp-mock:8090"}
+api-1  | 2026-11-14T05:27:17.198585979Z {"time":"2026-11-14T05:27:17.197925181Z","level":"INFO","msg":"submission workers started","workers":4}

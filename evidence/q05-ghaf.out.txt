@@ -1,0 +1,21 @@
+== Ghaf Tree Cafe (seller 6) invoices and portal errors ==
+ invoice_number |  status  | rejected_by |   rule   | row |                                    message                                    
+----------------+----------+-------------+----------+-----+-------------------------------------------------------------------------------
+ GTC-118-H8BN   | Rejected | portal      | AE-BR-04 | 2   | [Payment due date*] must be a date in YYYY-MM-DD format (got '13/12/2026').
+ GTC-118-H8BN   | Rejected | portal      | AE-BR-04 | 2   | [Invoice issue date*] must be a date in YYYY-MM-DD format (got '13/11/2026').
+ GTC-118-H8BN   | Rejected | portal      | AE-BR-04 | 3   | [Invoice issue date*] must be a date in YYYY-MM-DD format (got '13/11/2026').
+ GTC-118-H8BN   | Rejected | portal      | AE-BR-04 | 3   | [Payment due date*] must be a date in YYYY-MM-DD format (got '13/12/2026').
+ GTC-119-H8BN   | Rejected | portal      | AE-BR-04 | 4   | [Invoice issue date*] must be a date in YYYY-MM-DD format (got '13/11/2026').
+ GTC-119-H8BN   | Rejected | portal      | AE-BR-04 | 4   | [Payment due date*] must be a date in YYYY-MM-DD format (got '13/12/2026').
+ GTC-119-H8BN   | Rejected | portal      | AE-BR-04 | 5   | [Payment due date*] must be a date in YYYY-MM-DD format (got '13/12/2026').
+ GTC-119-H8BN   | Rejected | portal      | AE-BR-04 | 5   | [Invoice issue date*] must be a date in YYYY-MM-DD format (got '13/11/2026').
+ GTC-120-H8BN   | Rejected | portal      | AE-BR-04 | 6   | [Payment due date*] must be a date in YYYY-MM-DD format (got '14/12/2026').
+ GTC-120-H8BN   | Rejected | portal      | AE-BR-04 | 6   | [Invoice issue date*] must be a date in YYYY-MM-DD format (got '14/11/2026').
+ GTC-120-H8BN   | Rejected | portal      | AE-BR-04 | 7   | [Payment due date*] must be a date in YYYY-MM-DD format (got '14/12/2026').
+ GTC-120-H8BN   | Rejected | portal      | AE-BR-04 | 7   | [Invoice issue date*] must be a date in YYYY-MM-DD format (got '14/11/2026').
+ GTC-120-H8BN   | Rejected | portal      | AE-BR-04 | 8   | [Invoice issue date*] must be a date in YYYY-MM-DD format (got '14/11/2026').
+ GTC-120-H8BN   | Rejected | portal      | AE-BR-04 | 8   | [Payment due date*] must be a date in YYYY-MM-DD format (got '14/12/2026').
+ GTC-121-H8BN   | Rejected | portal      | AE-BR-04 | 9   | [Invoice issue date*] must be a date in YYYY-MM-DD format (got '15/11/2026').
+ GTC-121-H8BN   | Rejected | portal      | AE-BR-04 | 9   | [Payment due date*] must be a date in YYYY-MM-DD format (got '15/12/2026').
+(16 rows)
+

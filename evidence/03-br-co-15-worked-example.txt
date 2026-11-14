@@ -1,0 +1,8 @@
+# Worked example for item 03 (BR-CO-15). All lines are standard-rated (5%).
+# Portal sends: IBT-109 = sum(rounded line nets), IBT-110 = sum(rounded line VAT),
+#               IBT-112 = round( sum(qty x unit price x 1.05) )   <-- unrounded, pint.go:171
+# ASP checks:   IBT-112 == IBT-109 + IBT-110
+
+ANF-2611-0042: IBT-109=14307.08  IBT-110=715.35  net+VAT=15022.43  portal IBT-112=15022.42  diff=-0.01
+ANF-2611-0044: IBT-109=11254.84  IBT-110=562.75  net+VAT=11817.59  portal IBT-112=11817.57  diff=-0.02
+ANF-2611-0046: IBT-109=5343.80  IBT-110=267.20  net+VAT=5611.00  portal IBT-112=5610.99  diff=-0.01

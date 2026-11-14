@@ -1,0 +1,49 @@
+== Sahara (seller 5) imports ==
+                  id                  |            filename            |  status   | row_count | invoice_count | duration_ms |          created_at          
+--------------------------------------+--------------------------------+-----------+-----------+---------------+-------------+------------------------------
+ 0c6f3a52-1f0e-4f43-9d7a-6a1f1b2f0a04 | sahara-medical-batch-1029.xlsx | Completed |        24 |            12 |        7200 | 2026-10-29 10:20:00+00
+ d176ba80-d2ab-419e-95ad-b57fe5ce9c82 | sahara-medical-batch-1116.xlsx | Completed |        60 |            40 |       12685 | 2026-11-14 05:23:48.89008+00
+(2 rows)
+
+== Sahara invoices by status and whether an ASP reference exists ==
+  status   | has_asp_ref | count 
+-----------+-------------+-------
+ Accepted  | t           |    20
+ Submitted | f           |    32
+(2 rows)
+
+== Status history of one stuck Sahara invoice (last event = Submitted, nothing after) ==
+  invoice_number   |  status   |           detail           |          created_at           
+-------------------+-----------+----------------------------+-------------------------------
+ SMS-1116-009-H8BN | Parsed    | Created from uploaded file | 2026-11-14 05:23:48.98967+00
+ SMS-1116-009-H8BN | Validated | Passed portal validation   | 2026-11-14 05:23:51.787649+00
+ SMS-1116-009-H8BN | Submitted | Sent to ASP                | 2026-11-14 05:24:01.624335+00
+(3 rows)
+
+== Order in which Sahara invoices were submitted vs outcome (first 12 by submit time) ==
+ invoice_number |  status  | has_ref |      submitted_at      
+----------------+----------+---------+------------------------
+ SMS-1029-012   | Accepted | t       | 2026-10-29 10:20:10+00
+ SMS-1029-006   | Accepted | t       | 2026-10-29 10:20:10+00
+ SMS-1029-007   | Accepted | t       | 2026-10-29 10:20:10+00
+ SMS-1029-004   | Accepted | t       | 2026-10-29 10:20:10+00
+ SMS-1029-001   | Accepted | t       | 2026-10-29 10:20:10+00
+ SMS-1029-011   | Accepted | t       | 2026-10-29 10:20:10+00
+ SMS-1029-003   | Accepted | t       | 2026-10-29 10:20:10+00
+ SMS-1029-002   | Accepted | t       | 2026-10-29 10:20:10+00
+ SMS-1029-005   | Accepted | t       | 2026-10-29 10:20:10+00
+ SMS-1029-010   | Accepted | t       | 2026-10-29 10:20:10+00
+ SMS-1029-008   | Accepted | t       | 2026-10-29 10:20:10+00
+ SMS-1029-009   | Accepted | t       | 2026-10-29 10:20:10+00
+(12 rows)
+
+== All sellers: invoices stuck in Submitted with no ASP reference (the 429 victims) ==
+            name             | count 
+-----------------------------+-------
+ Palm Coast Electronics LLC  |   143
+ Marina Bay Hospitality LLC  |   143
+ Zayed Port Logistics LLC    |   140
+ Desert Rose Trading LLC     |   137
+ Sahara Medical Supplies FZE |    32
+(5 rows)
+

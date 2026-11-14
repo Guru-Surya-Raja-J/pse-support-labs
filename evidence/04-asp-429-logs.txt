@@ -1,0 +1,14 @@
+# asp-mock: number of 'rate limit exceeded' (HTTP 429) log lines since start: 595
+# sample:
+asp-mock-1  | 2026-11-14T05:24:01.636845577Z {"time":"2026-11-14T05:24:01.633251752Z","level":"WARN","msg":"rate limit exceeded","sender":"0235:1006453719","retry_after_s":1}
+asp-mock-1  | 2026-11-14T05:24:01.639440359Z {"time":"2026-11-14T05:24:01.639143461Z","level":"WARN","msg":"rate limit exceeded","sender":"0235:1006453719","retry_after_s":1}
+asp-mock-1  | 2026-11-14T05:24:01.641785453Z {"time":"2026-11-14T05:24:01.641086113Z","level":"WARN","msg":"rate limit exceeded","sender":"0235:1006453719","retry_after_s":1}
+asp-mock-1  | 2026-11-14T05:24:01.642045589Z {"time":"2026-11-14T05:24:01.64148188Z","level":"WARN","msg":"rate limit exceeded","sender":"0235:1006453719","retry_after_s":1}
+asp-mock-1  | 2026-11-14T05:24:01.649497630Z {"time":"2026-11-14T05:24:01.649188446Z","level":"WARN","msg":"rate limit exceeded","sender":"0235:1006453719","retry_after_s":1}
+
+# api: how the 429s were logged (status_code 429 -> no status change afterwards)
+api-1  | 2026-11-14T05:24:01.639479345Z {"time":"2026-11-14T05:24:01.639210502Z","level":"INFO","msg":"asp response","invoice_id":"56447904-083d-4478-88eb-e172f6322202","invoice_number":"SMS-1116-009-H8BN","status_code":429,"duration_ms":6}
+api-1  | 2026-11-14T05:24:01.639905682Z {"time":"2026-11-14T05:24:01.639551804Z","level":"INFO","msg":"asp response","invoice_id":"7101ea10-a8d4-4c66-9959-81caf5312695","invoice_number":"SMS-1116-010-H8BN","status_code":429,"duration_ms":4}
+api-1  | 2026-11-14T05:24:01.642152294Z {"time":"2026-11-14T05:24:01.641657948Z","level":"INFO","msg":"asp response","invoice_id":"afb45219-5772-4745-bf02-96654b9a467c","invoice_number":"SMS-1116-012-H8BN","status_code":429,"duration_ms":3}
+api-1  | 2026-11-14T05:24:01.642186830Z {"time":"2026-11-14T05:24:01.641728085Z","level":"INFO","msg":"asp response","invoice_id":"6cd0a053-3351-49d6-b6f2-bc171c73bde2","invoice_number":"SMS-1116-011-H8BN","status_code":429,"duration_ms":3}
+api-1  | 2026-11-14T05:24:01.649961018Z {"time":"2026-11-14T05:24:01.649647094Z","level":"INFO","msg":"asp response","invoice_id":"23645423-ffbc-4cc7-a277-f18525c60c56","invoice_number":"SMS-1116-014-H8BN","status_code":429,"duration_ms":1}

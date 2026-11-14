@@ -1,0 +1,7 @@
+# Item 05: same Ghaf file with ONLY the date text changed DD/MM/YYYY -> YYYY-MM-DD (what the customer would do in Excel)
+import d22df657-87cf-45c4-a9bc-85efb1ecf76f Completed statusCounts at return: {'Accepted': 0, 'Failed': 0, 'Parsed': 0, 'Rejected': 0, 'Submitted': 0, 'Validated': 4}
+a few seconds later: {'Accepted': 4, 'Failed': 0, 'Parsed': 0, 'Rejected': 0, 'Submitted': 0, 'Validated': 0}
+  GTC-118 2026-11-13 Accepted 8cf1b1a0-c625-4b84-b41d-24fa9c89fecb
+  GTC-119 2026-11-13 Accepted 8cb09e80-b90a-4113-87c7-1cab8db29ed7
+  GTC-120 2026-11-14 Accepted 6f6662e1-0f4f-4117-890c-82516b8fae09
+  GTC-121 2026-11-15 Accepted 9fa855db-66db-4d7a-9307-fa53e1ae47db

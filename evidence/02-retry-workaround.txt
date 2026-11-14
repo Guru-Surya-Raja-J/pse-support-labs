@@ -1,0 +1,7 @@
+# Item 02 workaround test: 'Retry stuck invoices' on Marina Bay batch 742e5f7d-ba38-4d16-b7b8-5f699ec92f42 (killed mid-import by OOM)
+before: Processing {'Accepted': 0, 'Failed': 0, 'Parsed': 1, 'Rejected': 0, 'Submitted': 0, 'Validated': 5}
+$ curl -X POST http://localhost:8080/v1/imports/742e5f7d-ba38-4d16-b7b8-5f699ec92f42/retry
+{"requeued":5}
+
+after (~5s): Processing {'Accepted': 5, 'Failed': 0, 'Parsed': 1, 'Rejected': 0, 'Submitted': 0, 'Validated': 0}
+# -> the 5 Validated invoices are recovered; the Parsed one cannot be retried and the batch stays 'Processing' (needs engineering).

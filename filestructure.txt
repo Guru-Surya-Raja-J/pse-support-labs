@@ -1,0 +1,166 @@
+|-- .gitignore
+|-- db
+    |-- init
+        |-- 001_schema.sql
+        |-- 002_seed.sql
+|-- docker-compose.yml
+|-- docs
+    |-- architecture.md
+    |-- customer-communication.md
+    |-- escalation-policy.md
+    |-- sla-matrix.md
+    |-- status-lifecycle.md
+    |-- template-field-guide.md
+|-- evidence
+    |-- 01-logs-repro.txt
+    |-- 01-portal-oasis-ae-br-09.png
+    |-- 01-repro-portal-upload.txt
+    |-- 02-api-log-before-restarts.txt
+    |-- 02-grafana-heap.png
+    |-- 02-oom-kills.txt
+    |-- 02-prometheus.txt
+    |-- 02-retry-workaround.txt
+    |-- 03-br-co-15-worked-example.txt
+    |-- 04-asp-429-logs.txt
+    |-- 04-asp-received-sahara.txt
+    |-- 04-grafana-asp-429.png
+    |-- 04-grafana-asp-outcome.png
+    |-- 04-portal-sahara-batch.png
+    |-- 04-retry-blocked.txt
+    |-- 05-fixed-file-upload.txt
+    |-- files
+        |-- ghaf-cafe-nov-2026-FIXED-dates.xlsx
+    |-- P1_Evidence.png
+    |-- q01-oasis-replay.out.txt
+    |-- q01-oasis-replay.sql
+    |-- q01-oasis.out.txt
+    |-- q01-oasis.sql
+    |-- q01-overview.out.txt
+    |-- q01-overview.sql
+    |-- q02-marina.out.txt
+    |-- q02-marina.sql
+    |-- q03-al-noor.out.txt
+    |-- q03-al-noor.sql
+    |-- q04-sahara.out.txt
+    |-- q04-sahara.sql
+    |-- q05-ghaf.out.txt
+    |-- q05-ghaf.sql
+    |-- README.md
+    |-- scripts
+        |-- logs2.sh
+        |-- oasislog.sh
+        |-- q.sh
+        |-- save02.sh
+|-- inbox
+    |-- 01-oasis-builders-upload-stuck.md
+    |-- 02-alert-api-restarted-marina-bay.md
+    |-- 03-al-noor-fuel-br-co-15.md
+    |-- 04-bluepeak-sahara-not-received.md
+    |-- 05-ghaf-cafe-date-error.md
+|-- Makefile
+|-- observability
+    |-- alloy
+        |-- config.alloy
+    |-- grafana
+        |-- dashboards
+            |-- invoicely-overview.json
+        |-- provisioning
+            |-- alerting
+                |-- rules.yml
+            |-- dashboards
+                |-- dashboards.yml
+            |-- datasources
+                |-- datasources.yml
+    |-- loki
+        |-- config.yml
+    |-- prometheus
+        |-- prometheus.yml
+|-- README.md
+|-- samples
+    |-- al-noor-fuel-nov-2026.xlsx
+    |-- desert-rose-nov-2026.xlsx
+    |-- ghaf-cafe-nov-2026.xlsx
+    |-- oasis-builders-nov-2026.xlsx
+    |-- sahara-medical-batch-1116.xlsx
+|-- services
+    |-- api
+        |-- Dockerfile
+        |-- go.mod
+        |-- go.sum
+        |-- internal
+            |-- directory
+                |-- directory.go
+            |-- httpapi
+                |-- httpapi.go
+            |-- importer
+                |-- importer.go
+                |-- sources.go
+            |-- metrics
+                |-- metrics.go
+            |-- pint
+                |-- pint.go
+            |-- sheet
+                |-- sheet.go
+            |-- store
+                |-- store.go
+            |-- submit
+                |-- submit.go
+            |-- validate
+                |-- validate.go
+        |-- main.go
+    |-- asp-mock
+        |-- Dockerfile
+        |-- go.mod
+        |-- go.sum
+        |-- main.go
+|-- START_HERE.md
+|-- SUBMISSION.md
+|-- tools
+    |-- cmd
+        |-- loadgen
+            |-- main.go
+        |-- samplegen
+            |-- main.go
+    |-- Dockerfile
+    |-- go.mod
+    |-- go.sum
+    |-- internal
+        |-- dataset
+            |-- dataset.go
+        |-- workbook
+            |-- workbook.go
+|-- web
+    |-- .dockerignore
+    |-- .gitignore
+    |-- app
+        |-- api
+            |-- [...path]
+                |-- route.ts
+        |-- globals.css
+        |-- imports
+            |-- [id]
+                |-- page.tsx
+            |-- page.tsx
+        |-- invoices
+            |-- [id]
+                |-- page.tsx
+        |-- layout.tsx
+        |-- not-found.tsx
+        |-- page.tsx
+        |-- upload
+            |-- page.tsx
+    |-- components
+        |-- ActionButton.tsx
+        |-- AutoRefresh.tsx
+        |-- ErrorPanel.tsx
+        |-- StatusBadge.tsx
+        |-- UploadForm.tsx
+    |-- Dockerfile
+    |-- lib
+        |-- api.ts
+        |-- format.ts
+        |-- types.ts
+    |-- next-env.d.ts
+    |-- next.config.ts
+    |-- package.json
+    |-- tsconfig.json

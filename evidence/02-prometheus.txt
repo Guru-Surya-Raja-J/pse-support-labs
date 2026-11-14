@@ -1,0 +1,17 @@
+# Prometheus evidence (queried 2026-11-14T05:40:53Z, window covers this morning's load test)
+$ promql: sum by (outcome) (increase(asp_documents_total[2h]))
+    {'outcome': 'accepted'} 827.1
+    {'outcome': 'rejected'} 3.0
+    {'outcome': 'throttled'} 595.8
+$ promql: sum by (code) (increase(invoicely_asp_responses_total[2h]))
+    {'code': '200'} 779.1
+    {'code': '422'} 0.0
+    {'code': '429'} 529.4
+$ promql: changes(process_start_time_seconds{job="api"}[2h])
+    {} 7.0
+$ promql: max_over_time(go_memstats_heap_inuse_bytes{job="api"}[2h]) / 1048576
+    {} 119.5
+$ promql: go_memstats_heap_inuse_bytes{job="api"} / 1048576
+    {} 20.8
+$ promql: histogram_quantile(0.95, sum by (le) (rate(invoicely_import_duration_seconds_bucket[2h])))
+    {} 4.9
